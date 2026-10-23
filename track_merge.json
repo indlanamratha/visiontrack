@@ -1,0 +1,59 @@
+{
+ "offset": 14.6,
+ "fps": 30,
+ "runs": [
+  {
+   "name": "yolov8x",
+   "tracks": "data/tracks_yolov8x.csv"
+  },
+  {
+   "name": "yolov8m",
+   "tracks": "data/tracks_yolov8m.csv"
+  }
+ ],
+ "people": {
+  "S1": {
+   "yolov8x": [
+    {
+     "id": 36,
+     "from": 16.7
+    },
+    56,
+    {
+     "id": 82,
+     "from": 19.25
+    },
+    87,
+    104,
+    130,
+    177
+   ],
+   "yolov8m": [
+    39,
+    48,
+    49,
+    77,
+    99,
+    142
+   ],
+   "exclude": [
+    [
+     20.19,
+     20.21
+    ]
+   ]
+  },
+  "P2": {
+   "yolov8x": [
+    139,
+    148
+   ],
+   "yolov8m": [
+    108,
+    116,
+    118,
+    129
+   ]
+  }
+ }
+}

@@ -1,0 +1,339 @@
+{
+ "clip": {
+  "id": "clip00001",
+  "location": "Apartment",
+  "type": "Chase",
+  "offset": 14.6,
+  "start": 15.0,
+  "end": 25.0,
+  "_note": "Times are in original YouTube video time. offset = video time of the first frame of clip.mp4.",
+  "_tracks": "data/tracks_merged.csv = reviewed YOLOv8x tracks, gaps filled from YOLOv8m (see track_merge.json)"
+ },
+ "people": {
+  "S1": {
+   "role": "suspect",
+   "label": "Suspect",
+   "tracks": [
+    1
+   ],
+   "hide": [
+    [
+     20.19,
+     20.25
+    ]
+   ]
+  },
+  "P2": {
+   "role": "police",
+   "label": "Officer 2",
+   "tracks": [
+    2
+   ]
+  }
+ },
+ "segments": [
+  {
+   "start": 15.0,
+   "end": 16.6,
+   "risk": 1,
+   "channels": {
+    "gesture": 0,
+    "facial": null,
+    "voice": null
+   },
+   "people": {},
+   "triggers": [
+    "Camera officer exiting a vehicle",
+    "No other person in view yet"
+   ]
+  },
+  {
+   "start": 16.6,
+   "end": 16.9,
+   "risk": 3,
+   "event": true,
+   "channels": {
+    "gesture": 3,
+    "facial": 2,
+    "voice": null
+   },
+   "people": {
+    "S1": {
+     "activity": "exiting car, fleeing",
+     "weapon": "none",
+     "sudden": 1
+    }
+   },
+   "triggers": [
+    "Suspect bolts from a parked car",
+    "Sudden movement away from officer"
+   ]
+  },
+  {
+   "start": 16.9,
+   "end": 17.5,
+   "risk": 5,
+   "event": true,
+   "headline": "Handgun visible · suspect fleeing",
+   "channels": {
+    "gesture": 5,
+    "facial": 2,
+    "voice": null
+   },
+   "people": {
+    "S1": {
+     "activity": "exiting car, fleeing",
+     "weapon": "gun",
+     "sudden": 1
+    }
+   },
+   "triggers": [
+    "Handgun visible in suspect's right hand",
+    "Suspect bolts from a parked car",
+    "Sudden movement away from officer"
+   ]
+  },
+  {
+   "start": 17.5,
+   "end": 19.0,
+   "risk": 5,
+   "event": true,
+   "headline": "Handgun visible · suspect fleeing on foot",
+   "channels": {
+    "gesture": 5,
+    "facial": null,
+    "voice": 5
+   },
+   "people": {
+    "S1": {
+     "activity": "running",
+     "weapon": "gun",
+     "sudden": 1
+    }
+   },
+   "triggers": [
+    "Handgun visible in suspect's right hand",
+    "Suspect fleeing on foot",
+    "Yelling (coded): \"He's got a gun!\""
+   ],
+   "speech": {
+    "who": "CODING SHEET",
+    "text": "He's got a gun!"
+   }
+  },
+  {
+   "start": 19.0,
+   "end": 20.1,
+   "risk": 5,
+   "headline": "Armed suspect within arm's reach of officer",
+   "channels": {
+    "gesture": 5,
+    "facial": null,
+    "voice": 5
+   },
+   "people": {
+    "S1": {
+     "activity": "running",
+     "weapon": "gun",
+     "sudden": 1
+    }
+   },
+   "triggers": [
+    "Armed suspect within arm's reach of officer",
+    "Rapid, erratic movement",
+    "Yelling (coded): \"He's got a gun!\""
+   ],
+   "speech": {
+    "who": "CODING SHEET",
+    "text": "He's got a gun!"
+   }
+  },
+  {
+   "start": 20.1,
+   "end": 21.2,
+   "risk": 5,
+   "event": true,
+   "headline": "Officer's firearm drawn · armed suspect fleeing",
+   "channels": {
+    "gesture": 5,
+    "facial": null,
+    "voice": null
+   },
+   "people": {
+    "S1": {
+     "activity": "running toward building",
+     "weapon": "gun"
+    }
+   },
+   "triggers": [
+    "Camera officer draws firearm",
+    "Suspect still armed and fleeing toward building"
+   ]
+  },
+  {
+   "start": 21.2,
+   "end": 23.0,
+   "risk": 5,
+   "event": true,
+   "headline": "Officer 2 intercepts · suspect still armed",
+   "channels": {
+    "gesture": 5,
+    "facial": 3,
+    "voice": null
+   },
+   "people": {
+    "S1": {
+     "activity": "stumbling, sudden turn",
+     "weapon": "gun",
+     "sudden": 1
+    },
+    "P2": {
+     "activity": "running to intercept",
+     "weapon": "holstered",
+     "gesture": "arms out"
+    }
+   },
+   "triggers": [
+    "Officer 2 closes in from the front",
+    "Suspect turns suddenly, gun in hand"
+   ]
+  },
+  {
+   "start": 23.0,
+   "end": 25.0,
+   "risk": 4,
+   "event": true,
+   "headline": "Suspect down · gun not yet secured",
+   "channels": {
+    "gesture": 4,
+    "facial": null,
+    "voice": null
+   },
+   "people": {
+    "S1": {
+     "activity": "falls to the ground",
+     "weapon": "gun (not secured)"
+    },
+    "P2": {
+     "activity": "approaching",
+     "weapon": "holstered"
+    }
+   },
+   "triggers": [
+    "Suspect falls to the ground",
+    "Officer's firearm still drawn",
+    "Suspect's gun not yet secured"
+   ]
+  }
+ ],
+ "manual_boxes": {
+  "S1": [
+   [
+    23.6,
+    540,
+    390,
+    860,
+    520
+   ],
+   [
+    23.9,
+    570,
+    390,
+    830,
+    520
+   ],
+   [
+    24.2,
+    430,
+    500,
+    800,
+    640
+   ],
+   [
+    24.5,
+    560,
+    490,
+    830,
+    640
+   ],
+   [
+    24.8,
+    560,
+    540,
+    830,
+    670
+   ],
+   [
+    25.0,
+    530,
+    520,
+    820,
+    690
+   ]
+  ]
+ },
+ "events": [
+  {
+   "t": 16.6,
+   "short": "Suspect flees",
+   "title": "Suspect flees",
+   "text": "S1 bolts from a parked car",
+   "kind": "warn"
+  },
+  {
+   "t": 16.9,
+   "short": "Weapon visible",
+   "title": "Weapon visible",
+   "text": "Handgun in S1's right hand",
+   "kind": "danger"
+  },
+  {
+   "t": 20.1,
+   "short": "Firearm drawn",
+   "title": "Firearm drawn",
+   "text": "Camera officer draws his weapon",
+   "kind": "danger"
+  },
+  {
+   "t": 21.2,
+   "short": "Officer 2",
+   "title": "Officer 2 arrives",
+   "text": "Moves in to intercept S1",
+   "kind": "info"
+  },
+  {
+   "t": 23.0,
+   "short": "Suspect down",
+   "title": "Suspect down",
+   "text": "S1 falls; gun not yet secured",
+   "kind": "warn"
+  }
+ ],
+ "spotlights": [
+  {
+   "t": 17.6,
+   "box": [
+    150,
+    50,
+    350,
+    370
+   ],
+   "title": "Weapon identified",
+   "text": "Handgun in the suspect's right hand as he runs from the car.",
+   "hold": 1.6
+  },
+  {
+   "t": 21.5,
+   "box": [
+    1195,
+    265,
+    1345,
+    395
+   ],
+   "title": "Still armed",
+   "text": "Gun remains in the suspect's hand as Officer 2 closes in.",
+   "hold": 1.6
+  }
+ ],
+ "max_gap_frames": 4
+}

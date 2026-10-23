@@ -1,0 +1,6 @@
+ultralytics>=8.3
+lap
+opencv-python
+pillow
+numpy
+openpyxl
